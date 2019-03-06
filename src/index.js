@@ -1,11 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import AppRouter from "./routers/AppRouter";
+import history from './history';
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./styles/styles.scss";
 
+const store = configureStore();
+
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById("root"));
+    hasRendered = true;
+  }
+};
+
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);
+store.subscribe(() => {
+  if (!store.getState().auth.token) {
+    history.push("/")
+  }
+})
+
+renderApp();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
