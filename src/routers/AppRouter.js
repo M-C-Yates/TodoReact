@@ -6,6 +6,7 @@ import PublicRoute from './PublicRoute';
 
 import AddTodoPage from '../components/AddTodoPage';
 import Dashboard from "../components/DashboardPage";
+import EditTodoPage from '../components/EditTodoPage';
 import LandingPage from "../components/LandingPage";
 import LoginPage from "../components/LoginPage";
 import RegistrationPage from "../components/RegistrationPage";
@@ -19,6 +20,7 @@ const AppRouter = () => (
       <PublicRoute path="/signup" component={RegistrationPage} />
       <PrivateRoute path="/dashboard" component={Dashboard} />
       <PrivateRoute path="/create" component={AddTodoPage} />
+      <PrivateRoute path="/edit/:id" component={EditTodoPage} />
     </Switch>
   </Router>
 );

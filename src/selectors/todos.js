@@ -1,11 +1,16 @@
 export default (todos, { createdAt, sortBy }) => {
+  
   if (sortBy === "date") {
-    return todos.sort((a, b) => {
-      return a.createdAt() < b.createdAt ? 1 : -1;
-    });
+    return todos.filter((todo) => {
+      return todo;
+    })
   } else if (sortBy === "asc") {
-    return todos.sort()
+    return todos.filter((todo) => {
+      return todo;
+    }).sort()
   } else if (sortBy === 'desc') {
-    return todos.sort().reverse()
+    return todos.filter((todo) => {
+      return todo;
+    }).sort().reverse()
   }
 };
