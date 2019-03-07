@@ -1,4 +1,3 @@
-import "whatwg-fetch";
 import axios from "axios";
 import history from "../history";
 
@@ -44,6 +43,7 @@ export const startLogout = () => {
         "X-Auth": token
       }
     }).then(res => {
+      console.log(typeof token);
       dispatch(logout(token));
       history.push("/");
 

@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
-import PublicHeader from "../components/PublicHeader";
+// import PublicHeader from "../components/PublicHeader";
+import Header from '../components/Header';
 export const PublicRoute = ({
   isAuthenticated,
   component: Component,
@@ -14,7 +15,7 @@ export const PublicRoute = ({
         <Redirect to="/dashboard" />
       ) : (
         <React.Fragment>
-          <PublicHeader />
+          <Header />
           <Component {...props} />
         </React.Fragment>
       )
