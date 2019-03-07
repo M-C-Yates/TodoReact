@@ -10,7 +10,7 @@ const TodoListItem = ({text, createdAt, completed, _id}) => (
       </span>
     </div>
     <h3 className="list-item__data">
-      {completed}
+      {completed.toString()}
     </h3>
   </Link>
 )
