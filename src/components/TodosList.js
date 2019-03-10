@@ -8,14 +8,9 @@ export class TodoList extends React.Component {
   componentDidMount(props) {
     this.props.startGetTodos();
   }
+  
   render() {
     return (
-      <div className="content-container">
-        <div className="list-header">
-          <div className="show-for-mobile">Expenses</div>
-          <div className="show-for-desktop">Expense</div>
-          <div className="show-for-desktop">Completed</div>
-        </div>
         <div className="list-body">
           {this.props.todos.length === 0 ? (
             <div>
@@ -29,7 +24,6 @@ export class TodoList extends React.Component {
             })
           )}
         </div>
-      </div>
     );
   }
 }

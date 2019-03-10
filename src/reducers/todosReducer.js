@@ -9,8 +9,10 @@ export default (state = [], action) => {
         ...state,
         action.todo
       ];
-      case "GET_TODOS":
+    case "GET_TODOS":
       return action.todos;
+    case "REMOVE_TODO":
+      return state.filter(({ id }) => id !== action.id);
     default:
       return state;
   }
