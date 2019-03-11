@@ -45,6 +45,36 @@ export const startGetTodos = () => {
 	};
 };
 
+export const editTodo = (id, updates) => ({
+	type: "EDIT_TODO",
+	id,
+	updates
+});
+
+export const startEditTodo = (id, updates) => {
+	return (dispatch, getState) => {
+		const _creator = getState().auth.id;
+		const token = getState().auth.token;
+		console.log(updates)
+		return axios(`${api}/todos/${id}`, {
+			method: "patch",
+			headers: {
+				"x-auth": token
+			},
+			data: {
+				text: updates.text,
+				completed: updates.completed
+			},
+			user: {
+				_creator
+			}
+		}).then((res) => {
+			dispatch(editTodo(id, updates));
+			dispatch(startGetTodos());
+		})
+	};
+};
+
 export const removeTodo = (id) => ({
 	type: "REMOVE_TODO",
 	id
@@ -58,8 +88,8 @@ export const startRemoveTodo = (id) => {
 				"x-auth": token
 			}
 		}).then((res) => {
-      dispatch(removeTodo(id));
-      dispatch(startGetTodos());
+			dispatch(removeTodo(id));
+			dispatch(startGetTodos());
 		});
 	};
 };
