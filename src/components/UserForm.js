@@ -35,24 +35,31 @@ export default class Userform extends React.Component {
 		return (
 			<form className="form" onSubmit={this.onSubmit}>
 				{this.state.error && <p className="form_error">{this.state.error}</p>}
-				<label htmlFor="email">Email: </label>
-				<input
-					type="text"
-					className="text-input"
-					placeholder="Email"
-					autoFocus
-					value={this.state.email}
-					onChange={this.onEmailChange}
-				/>
-				<label htmlFor="password">Password: </label>
-				<input
-					type="password"
-					minLength="8"
-					className="text-input"
-					placeholder="Password"
-					value={this.state.password}
-					onChange={this.onPasswordChange}
-				/>
+
+				<div className="input__box">
+					{" "}
+					<label htmlFor="email">Email: </label>
+					<input
+						type="text"
+						className="text-input"
+						placeholder="Email"
+						autoFocus
+						value={this.state.email}
+						onChange={this.onEmailChange}
+					/>
+				</div>
+				<div className="input__box">
+					<label htmlFor="password">Password: </label>
+					<input
+						type="password"
+						minLength="8"
+						className="text-input"
+						placeholder="Password"
+						value={this.state.password}
+						onChange={this.onPasswordChange}
+					/>
+				</div>
+
 				{history.location.pathname === "/login" ? (
 					<button className="btn-link">Login</button>
 				) : (

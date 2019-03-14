@@ -1,0 +1,20 @@
+.header {
+	grid-area: "header";
+	max-width: 80vw;
+	margin: 0 auto;
+	background-color: $color-grey;
+	text-align: center;
+
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+
+	&__title {
+		text-decoration: none;
+		color: $color-grey-light1;
+  }
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}

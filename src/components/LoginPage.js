@@ -9,10 +9,10 @@ export class LoginPage extends React.Component {
   };
   render() {
     return (
-      <React.Fragment>
+      <div className="login">
         <h2>Login</h2>
         <UserForm onSubmit={this.onSubmit} />
-      </React.Fragment>
+      </div>
     );
   }
 }

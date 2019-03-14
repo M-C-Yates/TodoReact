@@ -41,7 +41,7 @@ export class TodoForm extends React.Component {
 					onChange={this.onTextChange}
 				/>
 
-				<button className="btn-link">Save Todo</button>
+				<button className="btn-form">Save Todo</button>
 			</form>
 		);
 	}
