@@ -1,0 +1,42 @@
+.list-item {
+	position: relative;
+	width: 100%;
+	text-decoration: none;
+	color: $color-grey-dark2;
+
+	&_checkbox {
+		// position: absolute;
+		// top: -9999px;
+		// left: -9999px;
+		opacity: 0;
+
+		&:checked ~ form {
+			position: static;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+#checkLabel {
+	padding: 1rem 2rem;
+	background-color: $color-grey-dark2;
+	color: $color-grey-light1;
+	font-size: 2rem;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.edit {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}

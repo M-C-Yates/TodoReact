@@ -1,8 +1,8 @@
 .content-container {
 	grid-template-areas:
 		". header ."
-		". . ."
-		". . .";
+		". body ."
+		". footer .";
 	align-items: center;
 	justify-items: center;
 }

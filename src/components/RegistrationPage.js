@@ -9,7 +9,6 @@ export class RegistrationPage extends React.Component {
   render() {
     return (
       <div className="register">
-        <h2>Signup now</h2>
         <UserForm onSubmit={this.onSubmit} />
       </div>
     );

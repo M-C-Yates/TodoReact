@@ -1,0 +1,30 @@
+.edit {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 20rem;
+	div {
+		display: flex;
+		// flex-direction: column;
+		justify-content: flex-start;
+		padding: 1rem;
+		align-items: center;
+	}
+
+	&-label {
+		font-size: 2rem;
+		background-color: transparent;
+		padding-right: 1rem;
+	}
+	&-btn {
+		align-self: center;
+		background-color: $color-grey-dark1;
+		color: $color-grey-light1;
+		padding: 1.5rem 2.5rem;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+	}
+}

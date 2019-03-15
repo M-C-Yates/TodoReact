@@ -38,7 +38,7 @@ export default class Userform extends React.Component {
 
 				<div className="input__box">
 					{" "}
-					<label htmlFor="email">Email: </label>
+					<label htmlFor="email">Email </label>
 					<input
 						type="text"
 						className="text-input"
@@ -49,7 +49,7 @@ export default class Userform extends React.Component {
 					/>
 				</div>
 				<div className="input__box">
-					<label htmlFor="password">Password: </label>
+					<label htmlFor="password">Password </label>
 					<input
 						type="password"
 						minLength="8"
@@ -61,9 +61,9 @@ export default class Userform extends React.Component {
 				</div>
 
 				{history.location.pathname === "/login" ? (
-					<button className="btn-link">Login</button>
+					<button className="btn-form">Login</button>
 				) : (
-					<button className="btn-link">Register</button>
+					<button className="btn-form">Register</button>
 				)}
 			</form>
 		);

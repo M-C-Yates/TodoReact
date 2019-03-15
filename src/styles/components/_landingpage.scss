@@ -4,26 +4,30 @@
 
 	align-items: center;
 	justify-content: center;
-
-	max-width: 80vw;
+	@include respond(desk) {
+		max-width: 80vw;
+	}
 
 	margin: 0 auto;
 
 	.box {
 		height: 70rem;
 		width: 100%;
-		padding: 10rem 0 20rem 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
 
-		background-color: $color-grey-light1;
 
-		border-radius: 3px;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		-ms-border-radius: 3px;
-		-o-border-radius: 3px;
+
+		@include respond(desk) {
+		background-color: $color-grey-light1;
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-o-border-radius: 3px;
+		}
+
 	}
 }

@@ -21,13 +21,13 @@ export class Header extends React.Component {
             <Link className="header__title" to="/dashboard">
               <h1>Todo app</h1>
             </Link>
-            <button className="link" onClick={this.onClick}>
+            <button className="header__link" onClick={this.onClick}>
               Logout
             </button>
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Link className="header__title" to="/dashboard">
+            <Link className="header__title" to="/">
               <h1>Todo app</h1>
             </Link>
           </React.Fragment>

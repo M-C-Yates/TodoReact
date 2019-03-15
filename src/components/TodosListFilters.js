@@ -18,7 +18,7 @@ export class TodosListFilters extends React.Component {
   };
   render() {
     return (
-      <div className="content-container">
+      <div className="filter">
         <select
           className="select"
           value={this.props.filters.sortBy}

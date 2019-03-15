@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect} from 'react-redux';
 import getTodosTotal from '../selectors/todosTotal';
 import selectTodos from '../selectors/todos';
@@ -8,15 +7,12 @@ import selectTodos from '../selectors/todos';
 export const TodosSummary = ({todoCount, todosTotal}) => {
   const todoWord = todoCount === 1 ? 'todo' : 'todos';
   return (
-    <div className="page-header">
-      <div className="content-container">
-        <h3>Viewing <span>{todoCount}</span> {todoWord}</h3>
-        <ul>
+    <div className="summary">
+        <h3 className="summary-main">Viewing <span>{todoCount}</span> {todoWord}</h3>
+        <ul className="summary-list">
           <li>{todosTotal.completed} completed</li>
           <li>{todosTotal.unCompleted} unfinished</li>
         </ul>
-        <Link className="btn-link" to="/create">Add Todo</Link>
-      </div>
     </div>
   )
 }

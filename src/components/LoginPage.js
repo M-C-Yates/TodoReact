@@ -10,7 +10,6 @@ export class LoginPage extends React.Component {
   render() {
     return (
       <div className="login">
-        <h2>Login</h2>
         <UserForm onSubmit={this.onSubmit} />
       </div>
     );

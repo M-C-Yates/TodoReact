@@ -30,7 +30,7 @@ export class TodoForm extends React.Component {
 	};
 	render() {
 		return (
-			<form className="form" onSubmit={this.onSubmit}>
+			<form className="todo-form" onSubmit={this.onSubmit}>
 				{this.state.error && <p className="form_error">{this.state.error}</p>}
 				<input
 					type="text"
@@ -41,7 +41,7 @@ export class TodoForm extends React.Component {
 					onChange={this.onTextChange}
 				/>
 
-				<button className="btn-form">Save Todo</button>
+				<button className="btn-add">Save Todo</button>
 			</form>
 		);
 	}
