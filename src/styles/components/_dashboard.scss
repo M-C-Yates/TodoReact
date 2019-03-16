@@ -4,6 +4,7 @@
 	display: grid;
 	grid-template-rows: repeat(4, minmax(1fr, 40rem));
 	grid-template-areas: "summary" "form" "list" "list";
+	min-height: 90vh;
 	box-shadow: 0 1rem 1rem rgba($color-black, .1);
 	border-radius: 3px;
 	-webkit-border-radius: 3px;

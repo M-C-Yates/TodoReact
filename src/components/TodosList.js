@@ -19,9 +19,11 @@ export class TodoList extends React.Component {
 						<span className="list-item list-item__message">No Todos Found</span>
 					</div>
 				) : (
-					this.props.todos.map((todo) => {
-						return <TodoListItem key={todo._id} {...todo} />;
-					})
+					<div className="container-div2">
+						{this.props.todos.map((todo) => {
+							return <TodoListItem key={todo._id} {...todo} />;
+						})}
+					</div>
 				)}
 			</div>
 		);

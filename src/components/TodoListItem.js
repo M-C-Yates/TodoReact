@@ -25,7 +25,7 @@ export class TodoListItem extends React.Component {
 	render() {
 		return (
 				<div className="list-item">
-					<div className="flex-div1">
+					
 						<div>
 							<h3 className="list-item__title">{this.props.text}</h3>
 							<span className="list-item__sub-title">{this.props.createdAt}</span>
@@ -42,7 +42,7 @@ export class TodoListItem extends React.Component {
 							/>
 						</div>
 
-					</div>
+					
 				</div>
 			);
 			
