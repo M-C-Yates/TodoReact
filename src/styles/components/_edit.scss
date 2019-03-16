@@ -1,15 +1,10 @@
 .edit {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	justify-content: space-around;
 	height: 20rem;
-	div {
-		display: flex;
-		// flex-direction: column;
-		justify-content: flex-start;
-		padding: 1rem;
-		align-items: center;
-	}
+
 
 	&-label {
 		font-size: 2rem;
@@ -26,5 +21,15 @@
 		-moz-border-radius: 3px;
 		-ms-border-radius: 3px;
 		-o-border-radius: 3px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&-flex {
+		display: flex;
+		justify-content: space-between;
+		width: 100vw;
 	}
 }

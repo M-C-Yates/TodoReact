@@ -1,10 +1,11 @@
 .landing {
+	grid-area: main;
 	display: flex;
 	flex-direction: column;
-
+	width: 100%;
 	align-items: center;
 	justify-content: center;
-	@include respond(desk) {
+	@include respond(tab-port) {
 		max-width: 80vw;
 	}
 
@@ -20,8 +21,9 @@
 
 
 
-		@include respond(desk) {
-		background-color: $color-grey-light1;
+		@include respond(tab-port) {
+		background-color: $color-grey-light2;
+		max-width: 60vw;
 			border-radius: 3px;
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;

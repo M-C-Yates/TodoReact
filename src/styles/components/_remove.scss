@@ -1,5 +1,5 @@
 .remove {
-  align-self: center;
+  align-self: flex-start;
   background-color: $color-grey;
   color: $color-grey-light2;
   padding: 1.5rem 2.5rem;
@@ -8,4 +8,8 @@
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -12,10 +12,10 @@ export const PrivateRoute = ({
     {...rest}
     component={props =>
       isAuthenticated ? (
-        <div>
+        <React.Fragment>
           <Header history={props.history} />
           <Component {...props} />
-        </div>
+        </React.Fragment>
       ) : (
         <Redirect to="/" />
       )

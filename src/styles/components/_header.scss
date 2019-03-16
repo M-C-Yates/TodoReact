@@ -1,12 +1,11 @@
 .header {
-	grid-area: "header";
+	grid-area: header;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 8rem;
 
 	margin: 0 auto;
-	background-color: $color-grey-light1;
 	text-align: center;
 
 	&__title {
@@ -41,7 +40,7 @@
 		}
 }
 
-	@include respond(desk) {
+	@include respond(tab-port) {
 		max-width: 60vw;
 		border-radius: 3px;
 		-webkit-border-radius: 3px;

@@ -18,4 +18,8 @@
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

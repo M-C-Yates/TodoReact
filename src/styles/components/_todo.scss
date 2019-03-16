@@ -1,42 +1,57 @@
 .list-item {
-	position: relative;
-	width: 100%;
+	display: flex;
+	align-self: center;
+	max-width: 80rem;
+	overflow: hidden;
+	justify-content: space-between;
 	text-decoration: none;
 	color: $color-grey-dark2;
-
-	&_checkbox {
-		// position: absolute;
-		// top: -9999px;
-		// left: -9999px;
-		opacity: 0;
-
-		&:checked ~ form {
-			position: static;
-			opacity: 1;
-			visibility: visible;
-		}
+	@include respond(tab-port) {
+		padding: 1rem;
 	}
+	@include respond(tab-land) {
+		padding: 2rem;
+	}
+
 }
 
-#checkLabel {
-	padding: 1rem 2rem;
-	background-color: $color-grey-dark2;
+.container-div {
+	position: relative;
+}
+.flex-div1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hidey {
+	background-color: blue;
+}
+
+.hidden {
+	visibility: hidden;
+	display: none;
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+}
+.visible {
+	visibility: visible;
+	display: block;
+}
+.btn-edit {
+	padding: 1rem 1.5rem;
 	color: $color-grey-light1;
-	font-size: 2rem;
+	background-color: $color-grey-dark1;
+	align-self: flex-start;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
-}
-
-.edit {
-	position: absolute;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 1s;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	-ms-transition: all 1s;
-	-o-transition: all 1s;
+	&:hover {
+		cursor: pointer;
+	}
 }
