@@ -1,15 +1,23 @@
 .remove {
-  align-self: flex-start;
-  background-color: $color-danger;
-  color: $color-grey-light1;
+	align-self: flex-start;
+	background-color: $color-danger;
+	color: $color-grey-light1;
   padding: 1.5rem 2.5rem;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  border: 1px solid transparent;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	&:hover {
+		border: 1px solid $color-danger;
+		background-color: transparent;
+		color: $color-danger;
+		cursor: pointer;
+	}
 }
