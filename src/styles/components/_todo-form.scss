@@ -1,17 +1,16 @@
 .todo-form {
   width: 100%;
   grid-area: form;
-  // grid-column: 2 / 3;
+  max-height: 10rem;
   display: flex;
   justify-content: space-around;
   padding: 2rem 0;
-  background-color: $color-grey-light2;
   
 }
 
 .btn-add {
-  background-color: $color-grey-dark2;
-  color: $color-grey-light1;
+  background-color: $color-primary;
+  color: $color-white;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   -webkit-border-radius: 3px;

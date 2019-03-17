@@ -1,6 +1,7 @@
 .edit {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	max-width: 35rem;
 	justify-content: space-around;
 	height: 20rem;
@@ -13,7 +14,7 @@
 	}
 	&-btn {
 		align-self: center;
-		background-color: $color-grey-dark1;
+		background-color: $color-primary-dark;
 		color: $color-grey-light1;
 		padding: 1.5rem 2.5rem;
 		border-radius: 3px;
@@ -30,6 +31,6 @@
 	&-flex {
 		display: flex;
 		justify-content: space-between;
-		width: 100vw;
+		max-width: 35rem;
 	}
 }

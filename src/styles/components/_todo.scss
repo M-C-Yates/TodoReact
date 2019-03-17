@@ -10,7 +10,7 @@
 	@include respond(tab-port) {
 		padding: 1rem;
 	}
-	box-shadow: 0 2px 3px 3px rgba($color: #000000, $alpha: 0.05);
+	box-shadow: 0 2px 3px 3px rgba($color: $color-black, $alpha: 0.05);
 	margin-bottom: 1rem;
 
 }
@@ -22,10 +22,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.hidey {
-	background-color: blue;
 }
 
 .hidden {
@@ -43,8 +39,8 @@
 }
 .btn-edit {
 	padding: 1rem 1.5rem;
-	color: $color-grey-light1;
-	background-color: $color-grey-dark1;
+	color: $color-white;
+	background-color: $color-primary-dark;
 	align-self: flex-start;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;

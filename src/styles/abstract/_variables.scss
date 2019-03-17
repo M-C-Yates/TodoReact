@@ -4,16 +4,22 @@ $default-font-size: 1.8rem;
 
 
 //color variables
+$color-primary-dark: #0A6C74;
+$color-primary: #139198;
+$color-primary-light: #54D1D8;
 
-$color-grey-light1: #f7f7f7;
-$color-grey-light2: #eee;
-$color-grey-light3: #666;
+$color-white: #f0f4f8;
+$color-grey-light1: #d9e2ec;
+$color-grey-light2: #bcccdc;
+$color-grey-light3: #9fb3c8;
 
-$color-white: #fff;
-$color-grey: #393939;
-$color-grey-dark1: #242424;
-$color-grey-dark2: #1b1b1b;
-$color-black: #000;
+$color-grey: #627d98;
+$color-grey-dark1: #334e68;
+$color-grey-dark2: #243b53;
+$color-black: #102A43;
+
+$color-error: #da4a91;
+$color-danger: #5c0b33;
 
 //Shadow
 $box-shadow-light: 0 1.5rem 4rem rgba($color-black, .15);
