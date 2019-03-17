@@ -1,0 +1,62 @@
+.list-item {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	max-width: 60rem;
+	overflow: hidden;
+	justify-content: space-between;
+	text-decoration: none;
+
+	@include respond(tab-port) {
+		padding: 1rem;
+	}
+	box-shadow: 0 2px 3px 3px rgba($color: $color-black, $alpha: 0.05);
+	margin-bottom: 1rem;
+
+}
+
+.container-div {
+	position: relative;
+}
+.flex-div1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hidden {
+	visibility: hidden;
+	display: none;
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+}
+.visible {
+	visibility: visible;
+	display: block;
+}
+.btn-edit {
+	padding: 1rem 1.5rem;
+	color: $color-white;
+	background-color: $color-primary-dark;
+	border: 1px solid transparent;
+	align-self: flex-start;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	&:hover {
+		border: 1px solid $color-primary-dark;
+		background-color: transparent;
+		color: $color-primary-dark;
+		cursor: pointer;
+	}
+}

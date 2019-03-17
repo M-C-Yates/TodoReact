@@ -10,7 +10,7 @@ export class RemoveTodo extends React.Component {
 	};
 
 	render() {
-		return <button className="btn" onClick={this.onClick}>Remove</button>;
+		return <button className="remove" onClick={this.onClick}>Remove</button>;
 	}
 }
 

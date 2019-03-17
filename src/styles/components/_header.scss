@@ -1,0 +1,50 @@
+.header {
+	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 8rem;
+
+	text-align: center;
+
+	&__title {
+		text-decoration: none;
+		color: $color-grey-dark1;
+		padding: 1rem;
+	}
+
+	&__link {
+		width: 8rem;
+		font-size: 2rem;
+		padding: 1rem 0;
+		margin: 0 2rem;
+		color: $color-grey-light2;
+		background-color: $color-grey;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		&:hover,
+		&:active {
+			cursor: pointer;
+			background-color: transparent;
+			border: 1px solid $color-grey;
+		}
+}
+
+	@include respond(tab-port) {
+		max-width: 60vw;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+	}
+}

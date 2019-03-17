@@ -1,4 +1,5 @@
 import React from "react";
+import RemoveTodo from "./RemoveTodo";
 import { connect } from "react-redux";
 import { startEditTodo } from "../actions/todos";
 
@@ -35,24 +36,40 @@ export class EditTodo extends React.Component {
 	};
 	render() {
 		return (
-			<form className="form" onSubmit={this.onSubmit}>
+			<form className="edit" id={this.props.id} onSubmit={this.onSubmit}>
 				{this.state.error && <p className="form_error">{this.state.error}</p>}
-				<input
-					type="text"
-					className="text-input"
-					placeholder="Task"
-					value={this.state.text}
-					onChange={this.onTextChange}
-				/>
-				<input
-					type="checkbox"
-					name="completed"
-					checked={this.state.completed}
-					className="text-input"
-					value={this.state.completed}
-					onChange={this.onCompletedChange}
-				/>
-				<button className="btn-form">Edit Todo</button>
+				<div>
+					<label htmlFor="task" className="edit-label">
+						Task
+					</label>
+					<input
+						type="text"
+						id="task"
+						className="text-input"
+						placeholder="Task"
+						value={this.state.text}
+						onChange={this.onTextChange}
+					/>
+				</div>
+				<div>
+					<label htmlFor="completed" className="edit-label">
+						Completed:{" "}
+					</label>
+					<input
+						type="checkbox"
+						name="completed"
+						id="completed"
+						checked={this.state.completed}
+						className="edit-complete"
+						value={this.state.completed}
+						onChange={this.onCompletedChange}
+					/>
+				</div>
+
+				<div className="edit-flex">
+					<button className="edit-btn">Edit Todo</button>
+					<RemoveTodo id={this.props.id}>Remove</RemoveTodo>
+				</div>
 			</form>
 		);
 	}

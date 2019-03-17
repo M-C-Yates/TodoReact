@@ -8,10 +8,9 @@ export class RegistrationPage extends React.Component {
   };
   render() {
     return (
-      <React.Fragment>
-        <h2>Signup now</h2>
+      <div className="register">
         <UserForm onSubmit={this.onSubmit} />
-      </React.Fragment>
+      </div>
     );
   }
 }

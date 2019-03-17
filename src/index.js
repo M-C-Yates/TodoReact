@@ -5,14 +5,11 @@ import configureStore from './store/configureStore';
 import AppRouter from "./routers/AppRouter";
 import { logIn } from './actions/auth';
 
-// import * as serviceWorker from "./serviceWorker";
-
 import "./styles/styles.scss";
 
 const store = configureStore();
 
 const user = JSON.parse(localStorage.getItem('user'));
-// console.log(JSON.parse(user));
 if (user) {
   store.dispatch(logIn(user));
 }

@@ -1,0 +1,19 @@
+.summary {
+	grid-area: summary;
+	// grid-column: 2 / 3;
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+	padding: 1rem;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	&-main {
+		font-size: 3rem;
+	}
+	&-list {
+		list-style: none;
+	}
+}
